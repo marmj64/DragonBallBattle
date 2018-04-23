@@ -10,6 +10,7 @@ public class Goku extends Fighter implements FighterMoves {
     private int multiplier = 1;
 
     public Goku(){
+        //TEST
         super("Goku", 200, "Kaioken", "Kamehameha", "Instant Transmission", "Spirit Bomb");
     }
 
