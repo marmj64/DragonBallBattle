@@ -32,7 +32,7 @@ public class Goku extends Fighter implements FighterMoves {
     @Override
     public String specialAttack() {
         multiplier = 2;
-        return "Strong Attack Is Twice As Strong";
+        return "Kamehameha is Increased by 2-times for one move";
     }
 
 

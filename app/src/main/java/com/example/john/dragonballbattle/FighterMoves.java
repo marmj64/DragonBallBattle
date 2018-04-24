@@ -6,12 +6,12 @@ package com.example.john.dragonballbattle;
 
 public interface FighterMoves {
 
-    public int normalAttack();
+     int normalAttack();
 
-    public int strongAttack();
+     int strongAttack();
 
-    public String defenseAttack();
+     String defenseAttack();
 
-    public String specialAttack();
+     String specialAttack();
 
 }
