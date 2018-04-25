@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DragonBallBattle</string>
+    <string name="loginTitle">LOGIN</string>
+    <string name="loginUsernameLabel">User Name:</string>
+    <string name="loginPasswordLabel">Password:</string>
+    <string name="loginUsernameText">Enter User Name</string>
+    <string name="loginPasswordText">Enter Password</string>
+    <string name="loginLogin">LOGIN</string>
+    <string name="loginNewUser">Create New Account</string>
 </resources>
