@@ -17,6 +17,10 @@ public class User {
     public User(){
 
     }
+    public User(String newUsername, String newPassword){
+        username = newUsername;
+        password = newPassword;
+    }
 
     public void setUsername(String newUsername){
         this.username = newUsername;

@@ -7,4 +7,9 @@
     <string name="loginPasswordText">Enter Password</string>
     <string name="loginLogin">LOGIN</string>
     <string name="loginNewUser">Create New Account</string>
+    <string name="createAccountTitle">Create</string>
+    <string name="createAccountUserName">User Name</string>
+    <string name="createAccountPassword">Password</string>
+    <string name="createAccountPassword2">Validate Password</string>
+    <string name="createAccountButton">Create New Account</string>
 </resources>

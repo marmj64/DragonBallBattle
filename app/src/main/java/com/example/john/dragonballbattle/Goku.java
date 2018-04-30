@@ -14,6 +14,11 @@ public class Goku extends Fighter implements FighterMoves {
         super("Goku", 200, "Kaioken", "Kamehameha", "Instant Transmission", "Spirit Bomb");
     }
 
+   // @Override
+    public static String getFighterName() {
+        return null;
+    }
+
     @Override
     public int normalAttack() {
         return 75 * multiplier;

@@ -6,6 +6,8 @@ package com.example.john.dragonballbattle;
 
 public interface FighterMoves {
 
+     //static String getFighterName();
+
      int normalAttack();
 
      int strongAttack();

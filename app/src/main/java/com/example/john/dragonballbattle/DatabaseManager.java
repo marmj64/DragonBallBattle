@@ -1,6 +1,8 @@
 package com.example.john.dragonballbattle;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -28,7 +30,7 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(sqlCreateUserTable);
         //TODO 1. Need to ensure that the username in the results table is the username from the user info. Do we need to make this a foreign key?
         //TODO 2. The results table may need additional columns?
-        String sqlCreateResultsTable = "create table " + T_RESULTS + "( " + UNAME +" text primary key, "+ FIGHTER + " text, "+ RESULT + " text )" ;
+        String sqlCreateResultsTable = "create table " + T_RESULTS + "( " + UNAME +" text primary key UNIQUE, "+ FIGHTER + " text, "+ RESULT + " text )" ;
         db.execSQL(sqlCreateResultsTable);
     }
 
@@ -53,5 +55,19 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.execSQL(sqlInsert);
         db.close();
     }
+
+    public boolean searchUser(String username, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String sqlSearch = "select " + PWORD + " from " +T_USER_INFO + " where " + UNAME + " = '" + username+"'; ";
+        Cursor cursor = db.rawQuery( sqlSearch, null );
+        if(cursor.getCount()>0){//user name is wrong
+            cursor.moveToNext();
+            if(password.equals(cursor.getString(0))){//password is wrong
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
