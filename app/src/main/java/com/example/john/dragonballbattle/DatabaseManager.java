@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.v7.app.AlertDialog;
 
 /**
  * Created by John on 4/24/2018.
@@ -56,17 +57,20 @@ public class DatabaseManager extends SQLiteOpenHelper{
         db.close();
     }
 
-    public boolean searchUser(String username, String password){
+    public int searchUser(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         String sqlSearch = "select " + PWORD + " from " +T_USER_INFO + " where " + UNAME + " = '" + username+"'; ";
         Cursor cursor = db.rawQuery( sqlSearch, null );
-        if(cursor.getCount()>0){//user name is wrong
+        if(cursor.getCount()>0){
             cursor.moveToNext();
-            if(password.equals(cursor.getString(0))){//password is wrong
-                return true;
+            if(password.equals(cursor.getString(0))){//correct info
+                return 0;
             }
         }
-        return false;
+        else {//username is wrong
+            return 1;
+        }
+        return 2; //passoword is wrong
     }
 
 

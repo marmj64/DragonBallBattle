@@ -1,6 +1,7 @@
 package com.example.john.dragonballbattle;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,14 +22,24 @@ public class LoginActivity extends AppCompatActivity {
         EditText password = (EditText) findViewById(R.id.loginPasswordText);
         String userNameStr = userName.getText().toString();
         String passwordStr = password.getText().toString();
-        if(db.searchUser(userNameStr,passwordStr)) {
+        if(db.searchUser(userNameStr,passwordStr)==0) {
             //TODO 4. VALIDATE login credentials in DB.
             Intent completeIntent = new Intent(this, FighterSelectionActivity.class);
             //TODO 5 ADD METHODS TO DB TO IMPLEMENT
             this.startActivity(completeIntent);
         }
-        else{
-            Log.i("User_check","Incorrect login details");
+        else if (db.searchUser(userNameStr,passwordStr)==1){
+          //  Log.i("User_check","Incorrect login details");
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle("Invalid Username");
+            alertDialog.setMessage("The Username Does Not Exist. Please Re-Enter");
+            alertDialog.show();
+        }
+        else if(db.searchUser(userNameStr,passwordStr)==2){
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle("Invalid Password");
+            alertDialog.setMessage("The Password Is Incorrect. Please Re-Enter");
+            alertDialog.show();
         }
     }
 
@@ -37,6 +48,4 @@ public class LoginActivity extends AppCompatActivity {
         this.startActivity( completeIntent );
        // return true;
     }
-
-
 }

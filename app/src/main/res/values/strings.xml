@@ -12,4 +12,7 @@
     <string name="createAccountPassword">Password</string>
     <string name="createAccountPassword2">Validate Password</string>
     <string name="createAccountButton">Create New Account</string>
+    <string name="fighterSelectionButton">Confirm Your Selection</string>
+    <string name="fighterSelectionTitle">Fighter Selection</string>
+
 </resources>
