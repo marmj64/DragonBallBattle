@@ -5,7 +5,6 @@ package com.example.john.dragonballbattle;
  */
 
 public class KidBuu extends Fighter implements FighterMoves {
-    private int multiplier = 1;
 
     public KidBuu(){
         //TEST
@@ -19,23 +18,22 @@ public class KidBuu extends Fighter implements FighterMoves {
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 50;
     }
 
     @Override
     public int strongAttack() {
-        return 125;
+        return 75;
         //add accuracy for the attack
     }
 
     @Override
     public String defenseAttack() {
-        return "Opposing Player Looses Turn";
+        return "Regenerate 50 HP";
     }
 
     @Override
     public String specialAttack() {
-        multiplier = 2;
-        return "Opponent Attack does";
+        return "Opponent Loses 25 HP. Buu Gains 25 HP";
     }
 }

@@ -21,7 +21,7 @@ public class Goku extends Fighter implements FighterMoves {
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 50 * multiplier;
     }
 
     @Override
@@ -32,12 +32,13 @@ public class Goku extends Fighter implements FighterMoves {
 
     @Override
     public String defenseAttack() {
-        return "Opposing Player Looses Turn";    }
+        return "Opposing Player Looses Turn";
+    }
 
     @Override
     public String specialAttack() {
         multiplier = 2;
-        return "Kamehameha is Increased by 2-times for one move";
+        return "Attack Power Increased By 2x";
     }
 
 

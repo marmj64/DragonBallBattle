@@ -19,12 +19,12 @@ public class Monaka extends Fighter implements FighterMoves {
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 25;
     }
 
     @Override
     public int strongAttack() {
-        return 125;
+        return 50;
         //add accuracy for the attack
     }
 
@@ -35,7 +35,6 @@ public class Monaka extends Fighter implements FighterMoves {
 
     @Override
     public String specialAttack() {
-        multiplier = 2;
-        return "Opponent Attack does";
+        return "Opponent Loses 75 HP";
     }
 }

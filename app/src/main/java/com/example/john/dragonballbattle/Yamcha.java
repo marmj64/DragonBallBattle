@@ -5,7 +5,7 @@ package com.example.john.dragonballbattle;
  */
 
 public class Yamcha extends Fighter implements FighterMoves {
-    private int multiplier = 1;
+
 
     public Yamcha(){
         //TEST
@@ -19,13 +19,13 @@ public class Yamcha extends Fighter implements FighterMoves {
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 25;
     }
 
     @Override
     public int strongAttack() {
-        return 125;
-        //add accuracy for the attack
+        return 50;
+        //easter egg = if yamcha lands this attack 3 times in a row, on the 4th time its an insta kill
     }
 
     @Override
@@ -35,7 +35,6 @@ public class Yamcha extends Fighter implements FighterMoves {
 
     @Override
     public String specialAttack() {
-        multiplier = 2;
-        return "Opponent Attack does";
+        return "Opponent Loses 75 HP";
     }
 }

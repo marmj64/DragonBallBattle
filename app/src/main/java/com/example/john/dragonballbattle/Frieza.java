@@ -5,37 +5,33 @@ package com.example.john.dragonballbattle;
  */
 
 public class Frieza extends Fighter implements FighterMoves {
-    private int multiplier = 1;
-
+    private int fullPower = 0;
     public Frieza(){
-        //TEST
         super("Frieza", 200, "Death Beam", "Death Ball", "100% Power", "Death Saucer");
     }
-
-    // @Override
     public static String getFighterName() {
         return null;
     }
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 50 + fullPower;
     }
 
     @Override
     public int strongAttack() {
-        return 125;
+        return 75 + fullPower;
         //add accuracy for the attack
     }
 
     @Override
     public String defenseAttack() {
-        return "Opposing Player Looses Turn";
+        fullPower = 25;
+        return "Attack Power Increased By 25 Damage Points";
     }
 
     @Override
     public String specialAttack() {
-        multiplier = 2;
-        return "Opponent Attack does";
+        return "Opponent Loses 100 HP";
     }
 }

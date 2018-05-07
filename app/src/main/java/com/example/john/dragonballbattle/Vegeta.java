@@ -19,23 +19,22 @@ public class Vegeta extends Fighter implements FighterMoves {
 
     @Override
     public int normalAttack() {
-        return 75 * multiplier;
+        return 50;
     }
 
     @Override
     public int strongAttack() {
-        return 125;
+        return 75;
         //add accuracy for the attack
     }
 
     @Override
     public String defenseAttack() {
-        return "Both Opponent and Vegeta Lose 100 HP";
+        return "Opponent Loses 125 HP"+"\nVegeta Loses 100 HP";
     }
 
     @Override
     public String specialAttack() {
-        multiplier = 2;
-        return "Kamehameha is Increased by 2-times for one move";
+        return "Opponent Loses 100 HP";
     }
 }

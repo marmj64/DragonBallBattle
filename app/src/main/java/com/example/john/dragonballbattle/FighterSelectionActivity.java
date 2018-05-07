@@ -2,17 +2,24 @@ package com.example.john.dragonballbattle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class FighterSelectionActivity extends AppCompatActivity {
     private Spinner charSpinner;
+    private TextView moveList;
+    private Fighter selectedFighter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fighter_selection);
         charSpinner = (Spinner) findViewById(R.id.fighterSelectionCharSpinner);
+        moveList = (TextView) findViewById(R.id.fighterSelectionMoveList);
         populateSpinner();
     }
 
@@ -44,16 +51,43 @@ public class FighterSelectionActivity extends AppCompatActivity {
         for(int i = 0; i < loadFighters().length; i++){
             names[i] = fighters[i].getName();
         }
-
         return names;
     }
 
     private void populateSpinner(){
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+        //Fighter selectedFigher = new Fighter();
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, getFighterNames());
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         charSpinner.setAdapter(adapter);
+        charSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+               // Fighter currentFighter = new Fighter();
+                String text = charSpinner.getSelectedItem().toString();
+               // currentFighter =
+                Fighter[] array = loadFighters();
+                selectedFighter = array[charSpinner.getSelectedItemPosition()];
+                moveList.setText("Normal: " + selectedFighter.getNormal() + "\nStrong: " + selectedFighter.getStrong() + "\nDefense: " + selectedFighter.getDefense() + "\nSpecial: " + selectedFighter.getSpecial());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        populateMoves();
+    }
+
+
+    private void populateMoves(){
+
+        String move1 ;
+        String move2;
+        String move3;
+        String move4;
+       // moveList.setText();
     }
 }
