@@ -9,7 +9,7 @@ public class Piccolo extends Fighter implements FighterMoves {
 
     public Piccolo(){
         //TEST
-        super("Piccolo", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Piccolo", 200, "Demon Hand", "Special Beam Cannon", "Regeneration", "Hellzone Grenade");
     }
 
     // @Override

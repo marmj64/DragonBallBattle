@@ -9,7 +9,7 @@ public class Yamcha extends Fighter implements FighterMoves {
 
     public Yamcha(){
         //TEST
-        super("Yamcha", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Yamcha", 200, "Kamehameha", "Wolf Fang Fist", "Afterimage Technique", "Spirit Ball");
     }
 
     // @Override

@@ -9,7 +9,7 @@ public class KidBuu extends Fighter implements FighterMoves {
 
     public KidBuu(){
         //TEST
-        super("Kid Buu", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Kid Buu", 200, "Shocking Ball", "Planet Burst", "Regeneration", "Absorption");
     }
 
     // @Override

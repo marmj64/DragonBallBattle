@@ -9,7 +9,7 @@ public class Cell extends Fighter implements FighterMoves {
 
     public Cell(){
         //TEST
-        super("Cell", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Cell", 200, "Death Beam", "Super Kamehameha", "Instant Transmission", "Self Destruction");
     }
 
     // @Override

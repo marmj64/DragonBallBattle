@@ -9,7 +9,7 @@ public class Krillin extends Fighter implements FighterMoves {
 
     public Krillin(){
         //TEST
-        super("Krillin", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Krillin", 200, "Kamehameha", "Destructo Disk", "Solar Flare", "Scattering Bullet");
     }
 
     // @Override

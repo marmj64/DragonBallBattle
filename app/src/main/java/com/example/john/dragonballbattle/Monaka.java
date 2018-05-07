@@ -9,7 +9,7 @@ public class Monaka extends Fighter implements FighterMoves {
 
     public Monaka(){
         //TEST
-        super("Monaka", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Monaka", 200, "Scared Punch", "Scared Kick", "Run Away", "Delivery Special");
     }
 
     // @Override

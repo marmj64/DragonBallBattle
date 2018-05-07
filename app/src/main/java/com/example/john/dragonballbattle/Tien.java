@@ -9,7 +9,7 @@ public class Tien extends Fighter implements FighterMoves {
 
     public Tien(){
         //TEST
-        super("Tien", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Tien", 200, "Four Witches ", "Multi Form", "Solar Flare", "Tri Beam");
     }
 
     // @Override

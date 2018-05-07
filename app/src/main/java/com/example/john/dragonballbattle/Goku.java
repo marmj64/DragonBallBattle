@@ -11,7 +11,7 @@ public class Goku extends Fighter implements FighterMoves {
 
     public Goku(){
         //TEST
-        super("Goku", 200, "Kaioken", "Kamehameha", "Instant Transmission", "Spirit Bomb");
+        super("Goku", 200, "Kamehameha", "Spirit Bomb", "Instant Transmission", "Kaioken");
     }
 
    // @Override

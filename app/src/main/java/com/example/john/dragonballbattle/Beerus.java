@@ -9,7 +9,7 @@ public class Beerus extends Fighter implements FighterMoves {
 
     public Beerus(){
         //TEST
-        super("Beerus", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Beerus", 200, "Pressure Point Attack", "Wrath of the God of Destruction", "Energy Nullification", "Hakai");
     }
 
     // @Override

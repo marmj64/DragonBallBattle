@@ -9,7 +9,7 @@ public class Trunks extends Fighter implements FighterMoves {
 
     public Trunks(){
         //TEST
-        super("Trunks", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Trunks", 200, "Gallick Gun", "Masenko", "Shining Sword Attack", "Burning Attack");
     }
 
     // @Override

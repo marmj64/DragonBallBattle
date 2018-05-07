@@ -9,7 +9,7 @@ public class Hit extends Fighter implements FighterMoves {
 
     public Hit(){
         //TEST
-        super("Hit", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Hit", 200, "Vital Point Attack", "Flash Fist Crush ", "Time Skip", "Improve");
     }
 
     // @Override

@@ -9,7 +9,7 @@ public class Gohan extends Fighter implements FighterMoves {
 
     public Gohan(){
         //TEST
-        super("Gohan", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Gohan", 200, "Masenko", "Super Kamehameha", "Counter", "Father-Son Kamehameha");
     }
 
     // @Override

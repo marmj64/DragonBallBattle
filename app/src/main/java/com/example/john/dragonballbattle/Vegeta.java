@@ -9,7 +9,7 @@ public class Vegeta extends Fighter implements FighterMoves {
 
     public Vegeta(){
             //TEST
-            super("Vegeta", 200, "Pride Boost", "Gallick Gun", "Final Explosion", "Final Flash");
+            super("Vegeta", 200, "Gallick Gun", "Big Bang Attack", "Final Explosion", "Final Flash");
         }
 
         // @Override

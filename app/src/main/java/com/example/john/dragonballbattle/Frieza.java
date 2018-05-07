@@ -9,7 +9,7 @@ public class Frieza extends Fighter implements FighterMoves {
 
     public Frieza(){
         //TEST
-        super("Frieza", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Frieza", 200, "Death Beam", "Death Ball", "100% Power", "Death Saucer");
     }
 
     // @Override

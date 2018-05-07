@@ -9,7 +9,7 @@ public class MasterRoshi extends Fighter implements FighterMoves {
 
     public MasterRoshi(){
         //TEST
-        super("Master Roshi", 200, "Wrath of the God of Destruction", "Hakai", "Pressure Point Attack", "Energy Nullification");
+        super("Master Roshi", 200, "Drunken Fist", "Kamehameha", "Mafuba", "Max Power");
     }
 
     // @Override
